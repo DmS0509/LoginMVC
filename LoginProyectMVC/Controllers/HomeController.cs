@@ -19,7 +19,17 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult AccessDenied()
+    {
+        return View();
+    }
+
+    public IActionResult Roles()
+    {
+        return View();
+    }
+
+    public new IActionResult User()
     {
         return View();
     }
@@ -29,10 +39,4 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
-    [Authorize]
-    public IActionResult SecurePage()
-    {
-        return View();
-    }
-
 }

@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Roles";
+}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Usuarios - UPTC</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="~/css/estilo2.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="menu container">
+                <a href="#" class="logo">UPTC</a>
+                <input type="checkbox" id="menu">
+                <label for="menu">
+                    <img src="~/images/menu.png" alt="Menú" class="menu-icono">
+                </label>
+                <nav class="navbar">
+                    <ul>
+                        <li><a asp-controller="Home" asp-action="usuario">Inicio</a></li>
+                        <li><a href="#" class="active">Usuarios</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+
+        <main class="usuarios container">
+
+            <h2>Lista de Roles</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rol</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Administrador</td>
+                        <td>Gestiona usuarios y configuraciones del sistema.</td>
+                    </tr>
+                    <tr>
+                        <td>Gerente de Recursos Humanos</td>
+                        <td>Gestiona la contratación, desarrollo y bienestar del personal.</td>
+                    </tr>
+                    <tr>
+                        <td>Usuario</td>
+                        <td>Accede a los servicios y funciones básicas de la plataforma.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+
+
+
+        <footer>
+
+            <div class="container">
+
+                <div class="enlaces">
+
+                    <h3>UPTC</h3>
+                    <div class="enlace">
+                        <li><a href="#">Contactos</a></li>
+                        <li><a href="#">Información</a></li>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+    </body>

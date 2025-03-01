@@ -1,8 +1,64 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model LoginViewModel
+
+@{
+    ViewData["Index"] = "Index";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/estilos.css">
+</head>
+<body>
+    <main>
+        <div class="contenedor__todo">
+            <div class="caja__trasera">
+                <div class="caja__trasera-login">
+                    <h3>¿Ya tienes una cuenta?</h3>
+                    <p>Inicia sesión para entrar en la página</p>
+                    <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                </div>
+                <div class="caja__trasera-register">
+                    <h3>¿Aún no tienes una cuenta?</h3>
+                    <p>Regístrate para que puedas iniciar sesión</p>
+                    <button id="btn__registrarse">Regístrarse</button>
+                </div>
+            </div>
+
+            <div class="contenedor__login-register">
+                <!-- Formulario de inicio de sesión -->
+                <form asp-action="Login" asp-controller="Account" method="post" class="formulario__login" id="form-login">
+                    <h2>Iniciar Sesión</h2>
+                    <input asp-for="Username" placeholder="Usuario" required>
+                    <input asp-for="Password" type="password" placeholder="Contraseña" required>
+                    <button type="submit">Entrar</button>
+                    <a href="#" class="olvido-contrasena" id="olvide-contrasena">¿Olvido su contraseña?</a>
+                </form>
+
+
+                <!-- Formulario de registro -->
+                <form asp-action="Register" asp-controller="Account" method="post" class="formulario__register" style="display: none;">
+                    <h2>Regístrarse</h2>
+                    <input type="text" name="FullName" placeholder="Nombre completo" required>
+                    <input type="email" name="Email" placeholder="Correo electrónico" required>
+                    <input type="text" name="Username" placeholder="Usuario" required>
+                    <input type="password" name="Password" placeholder="Contraseña" required>
+                    <button type="submit">Regístrarse</button>
+                </form>
+
+                <!-- Formulario para recuperar la contraseña -->
+                <form asp-action="RecoverPassword" asp-controller="Account" method="post" class="formulario__recuperar" id="form-recuperar" style="display: none;">
+                    <h2>Recuperar Contraseña</h2>
+                    <input type="email" name="Email" placeholder="Introduzca su correo electrónico" required>
+                    <button type="submit">Recuperar</button>
+                    <a href="#" id="volver-login">Volver al inicio de sesión</a>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="~/js/script.js"></script>
+</body>
