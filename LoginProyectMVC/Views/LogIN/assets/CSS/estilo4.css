@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-image: url(../images/image_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;    
+}
+
+header{
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.menu{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.menu .logo{
+    font-weight: 700;
+    font-size: 25px;
+    color: black;
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 10px 35px;
+    color: black;
+    border-radius: 15px;
+    display: block;
+}
+
+.menu .navbar ul li a:hover{
+    background-color: #75d8a8;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+.header-content{
+    display: flex;
+}
+
+.header-content img{
+    width: 480px;
+    margin-top: 100px;
+    border-radius: 20px;
+}
+
+.content{
+    padding: 150px 50px 0px 0px;
+}
+
+.content h1{
+    color: black;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 70px;
+}
+
+.content p{
+    margin-top: 25px;
+    color: #505553;
+    font-size: 20px;
+}
+
+.btn-1{
+    display: inline-block;
+    background-color: #1ea363;
+    margin-top: 80px;
+    padding: 15px 25px;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.btn-1:hover{
+    background-color: #1c7e4f;
+}
+
+.services{
+    padding: 120px 0px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    color: #ffffff;
+}
+
+.service {
+    padding: 30px;
+    margin: 0px 10px;
+    background-color: #339c79;
+    border-radius: 35px;
+    transition: all 0.3s ease-in-out;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.service img{
+    width: 150px;
+    height: 100px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.service h3{
+    font-size: 20px;
+    margin-top: 20px;
+}
+.service p{
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.contacts {
+    padding: 50px 0px;
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+}
+
+.contac{
+    align-self: center;
+}
+
+.contac img{
+    width: 250px;
+    margin-right: 100px;
+}
+
+.contac h2{
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.contac img{
+    width: 80px;
+}
+
+
+footer{
+    margin-top: 100px;
+    padding: 30px;
+    background-color: #024424;
+    color: #ffffff;
+}
+
+.enlaces{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.enlaces h3{
+    font-size: 25px;
+}
+
+.enlace{
+    display: flex;
+}
+
+.enlace li a{
+    display: block;
+    margin: 20px;
+    color: #ffffff;
+    padding: 10px 35px;
+    border-radius: 15px;
+}
+
+.enlace li a:hover {
+    background-color: #75d8a8;
+}
+
+@media screen  and (max-width: 850px){
+
+    .menu{
+        padding: 20px;
+    }
+
+    .menu label{
+        display: initial;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #3aaa74;
+        display: none;
+    }
+
+    .menu .navbar ul li{
+        width: 100%;
+    }
+
+    .menu .navbar ul li a{
+        margin: 10px;
+        padding: 15px 35px;
+    }
+
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+
+    header{
+        height: 0vh;
+        padding: 400px 0px 340px 0px;
+    }
+
+    .header-content{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 0px 30px;
+    }
+
+    .content{
+        padding: 0;
+    }
+
+    .content h1{
+        margin-top: 0;
+    }
+
+    .content p{
+        margin-top: 15px;
+    }
+
+    .btn-1{
+        margin-top: 15px;
+    }
+
+    .header-content img{
+        margin-top: 45px;
+        width: 200px;
+    }
+
+    .services{
+        flex-direction: column;
+        padding: 30px 30px 0px 30px;
+    }
+
+    .service{
+        margin-bottom: 30px;
+    }
+
+    footer{
+        padding: 30px;
+    }
+
+    .enlaces{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .enlace{
+        flex-direction: column;
+        margin-top: 5px;
+    }
+    
+}
