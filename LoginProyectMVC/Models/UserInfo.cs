@@ -5,11 +5,14 @@ namespace LoginProyectMVC.Models
 {
     public class UserInfo
     {
-        public int Id { get; set; }  // FK de User
-        public string Name { get; set; }
-        public string Email { get; set; }
-        public DateTime CreationDate { get; set; }
-        public string Status { get; set; }
+        public int Id { get; set; }  // Primary Key, debe coincidir con User.Id
+        public string Nombre { get; set; }
+        public string Correo { get; set; }
+        public DateTime FechaCreacion { get; set; }
+        public bool Estado { get; set; }
+
+        // Clave foránea para User
+        public int UserId { get; set; }
         public User User { get; set; }
     }
 }
